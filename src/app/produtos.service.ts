@@ -14,7 +14,7 @@ const httpOptions = {
 })
 export class ProdutosService {
 
-  url = 'https://localhost:44384/api/produtos'
+  url = 'http://localhost:5209/api/produtos'
 
   constructor(private http: HttpClient) { }
 
@@ -29,14 +29,5 @@ export class ProdutosService {
 
    SalvarProduto(produto: produtos): Observable<any>{
      return this.http.post<produtos>(this.url, produto, httpOptions);
-   }
-
-   ExcluirProduto(produtoId: number): Observable<boolean>{
-    const apiURL = `${this.url}/${produtoId}`;
-    return this.http.delete<boolean>(apiURL);
-   }
-
-   EditarProduto(produto: produtos): Observable<any>{
-    return this.http.put<produtos>(this.url, produto, httpOptions);
    }
 }

@@ -7,8 +7,8 @@ import { NavComponent } from './componentes/nav/nav.component';
 const routes: Routes = [
   { path: '', redirectTo: 'consulta', pathMatch: 'full'},
   { path: 'consulta', component: NavComponent},
-  { path: 'cadastro/produto/:id', component: ProdutosCadastroComponent},
-  { path: 'cadastro/fornecedor/:id', component: FornecedoresCadastroComponent}
+  { path: 'cadastro/produto', component: ProdutosCadastroComponent},
+  { path: 'cadastro/fornecedor', component: FornecedoresCadastroComponent}
 ];
 
 @NgModule({

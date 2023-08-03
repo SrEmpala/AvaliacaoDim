@@ -3,7 +3,6 @@ using CRUDProdutos.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using CRUDProdutos.Models.ViewModels;
 
 namespace CRUDProdutos.Controllers
 {
@@ -39,9 +38,8 @@ namespace CRUDProdutos.Controllers
     }
 
     [HttpPost]
-    public async Task<ActionResult<Produtos>> SalvarProdutosAsync(CadastroProdutoViewModel model)
+    public async Task<ActionResult<Produtos>> SalvarProdutosAsync(Produtos produto)
     {
-      var produto = new Produtos(model.Id, model.TipoItem, model.Nome, model.Referencia, model.FornecedorId, model.CustoCompra, model.PrecoSaida, model.Descricao, model.PesoLiquido, model.PesoBruto);
       await _contexto.Produtos.AddAsync(produto);
       await _contexto.SaveChangesAsync();
 
@@ -49,9 +47,8 @@ namespace CRUDProdutos.Controllers
     }
 
     [HttpPut]
-    public async Task<ActionResult> AtualizarProdutoAsync(CadastroProdutoViewModel model)
+    public async Task<ActionResult> AtualizarProdutoAsync(Produtos produto)
     {
-      var produto = new Produtos(model.Id, model.TipoItem, model.Nome, model.Referencia, model.FornecedorId, model.CustoCompra, model.PrecoSaida, model.Descricao, model.PesoLiquido, model.PesoBruto);
       _contexto.Produtos.Update(produto);
       await _contexto.SaveChangesAsync();
 

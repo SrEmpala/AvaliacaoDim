@@ -14,7 +14,7 @@ const httpOptions = {
 })
 export class FornecedoresService {
 
-  url = 'https://localhost:44384/api/fornecedores'
+  url = 'http://localhost:5209/api/fornecedores'
 
   constructor(private http: HttpClient) { }
 
@@ -29,14 +29,5 @@ export class FornecedoresService {
 
    SalvarFornecedor(fornecedor: fornecedores): Observable<any>{
      return this.http.post<fornecedores>(this.url, fornecedor, httpOptions);
-   }
-
-   ExcluirFornecedor(fornecedorId: number): Observable<boolean>{
-    const apiURL = `${this.url}/${fornecedorId}`;
-    return this.http.delete<boolean>(apiURL);
-   }
-
-   EditarFornecedor(fornecedor: fornecedores): Observable<any>{
-    return this.http.put<fornecedores>(this.url, fornecedor, httpOptions);
    }
 }

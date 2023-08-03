@@ -1,5 +1,5 @@
 <div class="container">
-    <app-card [titulo]="tituloFormulario + ' Fornecedor' ">
+    <app-card titulo="Cadastrar Fornecedor">
         <form [formGroup]="fornecedorCadastro" (ngSubmit)="Adicionar()">
             <div class="row">
                 <div class="form-group col-sm-6 col-lg-3">
@@ -46,12 +46,8 @@
                 </div>
             </div>
             
-            <div class="row" *ngIf="erro"  class="alert alert-danger mt-4">
-                *{{erro}}
-            </div>
-    
             <div class="pt-2">
-                <button class="btn btn-outline-success" style="margin-right: 0.5rem;">{{tituloBotao}}</button>
+                <button class="btn btn-outline-success" style="margin-right: 0.5rem;">Adicionar</button>
     
                 <button class="btn btn-outline-primary" type="button"
                     [routerLink]="['/consulta']">Voltar</button>

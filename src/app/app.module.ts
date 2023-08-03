@@ -13,10 +13,8 @@ import { NavComponent } from './componentes/nav/nav.component';
 import { CardComponent } from './componentes/card/card.component';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { produtos } from './produtos';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { fornecedores } from './fornecedores';
-import { ProdutosService } from './produtos.service';
-import { FornecedoresService } from './fornecedores.service';
 
 @NgModule({
   declarations: [
@@ -34,9 +32,8 @@ import { FornecedoresService } from './fornecedores.service';
     FormsModule,
     ReactiveFormsModule,
     NgSelectModule,
-    HttpClientModule,
   ],
-  providers: [HttpClientModule, produtos, fornecedores, ProdutosService, FornecedoresService],
+  providers: [HttpClientModule, produtos, fornecedores],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
