@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ng-dropdown-panel{
+    background-color: rgb(255, 255, 255);
+    padding-inline: 0.5rem;
+    right: 0;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.container{
+    display: grid;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.label-required{
+    font-weight: bold;
+}

@@ -1,0 +1,61 @@
+<div class="container">
+    <app-card [titulo]="tituloFormulario + ' Fornecedor' ">
+        <form [formGroup]="fornecedorCadastro" (ngSubmit)="Adicionar()">
+            <div class="row">
+                <div class="form-group col-sm-6 col-lg-3">
+                    <label class="form-label">Nome</label>
+                    <input class="form-control" formControlName="Nome">
+                </div>
+    
+                <div class="form-group col-sm-6 col-lg-3">
+                    <label class="form-label">Nome Fantasia</label>
+                    <input class="form-control" formControlName="NomeFantasia">
+                </div>
+    
+                <div class="form-group col-sm-6 col-lg-3">
+                    <label class="form-label">CEP</label>
+                    <input class="form-control" formControlName="CEP">
+                </div>
+    
+                <div class="form-group col-sm-6 col-lg-3">
+                    <label class="form-label">CPF/CNPJ</label>
+                    <input class="form-control" formControlName="CPF">
+                </div>
+            </div>
+    
+            
+            <div class="row">
+                <div class="form-group col-sm-6 col-lg-3">
+                    <label class="form-label">Celular Whatsapp</label>
+                    <input class="form-control" formControlName="CelularWpp">
+                </div>
+    
+                <div class="form-group col-sm-6 col-lg-3">
+                    <label class="form-label">Telefone Responsável</label>
+                    <input class="form-control" formControlName="Telefone">
+                </div>
+    
+                <div class="form-group col-sm-6 col-lg-3">
+                    <label class="form-label">Email</label>
+                    <input class="form-control" formControlName="Email">
+                </div>
+    
+                <div class="form-group col-sm-6 col-lg-3">
+                    <label class="form-label">Observação</label>
+                    <input class="form-control" formControlName="Observacoes">
+                </div>
+            </div>
+            
+            <div class="row" *ngIf="erro"  class="alert alert-danger mt-4">
+                *{{erro}}
+            </div>
+    
+            <div class="pt-2">
+                <button class="btn btn-outline-success" style="margin-right: 0.5rem;">{{tituloBotao}}</button>
+    
+                <button class="btn btn-outline-primary" type="button"
+                    [routerLink]="['/consulta']">Voltar</button>
+            </div>
+        </form>
+    </app-card>
+</div>

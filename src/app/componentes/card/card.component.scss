@@ -1,0 +1,11 @@
+.card-title{
+    font-size: 1.25rem;
+    color: #303030;
+}
+
+.card{
+    backdrop-filter: blur(2px) saturate(180%);
+    background-color: rgba(224, 224, 224, 0.5);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    padding: 1rem;
+}
