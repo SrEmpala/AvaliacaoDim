@@ -23,6 +23,7 @@ export class ProdutosCadastroComponent implements OnInit {
   ngOnInit(): void {
 
     this.id = this.route.snapshot.params['id'];
+    console.log("🚀 ~ file: produtos-cadastro.component.ts:26 ~ ProdutosCadastroComponent ~ ngOnInit ~ this.id:", this.id)
     if (this.id > 0) {
       this.CarregarProdutosEdicao();
     }
